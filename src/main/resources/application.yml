@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: untitled
+
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+
+      bindings:
+        basicProducer-out-0:
+          destination: hello
+          content-type: application/json
+        basicConsumer-in-0:
+          destination: hello
+          content-type: application/json
